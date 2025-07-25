@@ -1,88 +1,20 @@
-### How Does the Trailing/Static Drawdown Threshold Work? (Master Course)
-
-Start with your initial balance and allowable contracts for the plan.
-
-You can trade up to the maximum contracts.
-
-Micros can also be traded up to the max contract size for the plan.
-
-The max loss drawdown varies for each plan. For example, on a 50k plan, it starts $2500 below 50k at $47,500.
-
-There is no daily max drawdown limit.
-
-For FULL accounts:
-
-In a paid/funded account, the max drawdown stops trailing when the liquidation threshold is at $100 plus the initial plan balance (i.e. $50,100 on a 50K plan). To clarify, when your peak unrealized account balance is the initial plan balance, plus the trailing drawdown amount, plus $100, the trailing will stop.
-
-For the STATIC accounts:
-
-The drawdown will remain unchanged as it is already static. For example, with a 100k STATIC account, the drawdown will remain at $99,375 and will not change.
-
- 
-
-Below is the Max Drawdown for each contract size and plan.
-
- 
-
-Plan	Account Size	Max Loss/Live Trailing Threshold
-25K Full Size	4 Minis	-1500
-50K Full Size	10 Minis	-2500
-100K Full Size	14 Minis	-3000
-150K Full Size	17 Minis	-5000
-250K Full Size	27 Minis	-6500
-300K Full Size	35 Minis	-7500
-100K Static	2 Minis	-625
- 
-
-Notice the rising trailing max drawdown in your RTrader dashboard under Auto Liquidate Threshold. It is important to monitor this value. If your account drops below the drawdown threshold, you will fail the evaluation.
-
-For example, if your risk allowed is $2,500, it will trail the highest live profit by $2,500.
-
-See the following as an example:
-
-Your starting balance is $50,000. Your threshold will be $47,500 ($2,500 below $50,000).
-
-You make $500 and close the trade. Your balance will be $50,500 and your threshold will be $48,000 ($2,500 below $50,500).
-
-Next, you enter a trade and get up to $52,000, but don't close the trade until your balance is at $51,000. Then, your threshold will be $49,500 ($2,500 behind the highest live value of $52,000).
-As you can see, the drawdown threshold liquidation is not based on when you close the trade. It is based on the highest balance of when you are in a trade.
-
-
-This is important to keep in mind, especially if you are trailing trades, since when you give up profit on the trail, you still raise your trailing threshold.
-
-
- 
-
-The following only applies to RITHMIC accounts:
-During your evaluation, the drawdown will stop trailing once the trailing stop hits the profit target. This means once your THRESHOLD BALANCE reaches your profit goal, NOT your ACCOUNT BALANCE, the drawdown stops trailing.
-For example, in a 50K evaluation account, once the auto liquidation threshold value gets up to $53,000, the drawdown will stop trailing. 
-
- 
-
-The following applies only to TRADOVATE accounts:
-During your evaluation, your trailing drawdown will NOT stop trailing.
-
-Each evaluation and PA account comes with a max drawdown amount.
-For example, the 50K account has a Trailing Threshold of $2,500. This means that the max you can lose is $2,500 from the highest profit point (open equity, not closed profit).
-
-
-Let's say you begin the first day with $50,000 and the max you can lose is $2,500 or a low of $47,500. You place your first trade and the active trade is in profit $600. Your max drawdown always TRAILS the profit peak in real time, so now the max drawdown is $48,100. ($50,600- $2,500 = $48,100).
-However, you have not yet closed the trade. By the time you close the trade, your profit is only $100. Your max drawdown remains at $48,100 even though you only have $50,100 in the account. This is because at one time during an active trade, you reached a peak of $50,600.
-
-The max drawdown always trails by $2,500 from the highest point.
-
- 
-
-In your Paid/Funded account, the trail will stop when you have exceeded the risk allotment by $100. For example, suppose you are allowed $2500 trail and start at $50,000. Once you exceed $52,600, your trail will stop at $50,100 and not trail up any further.
-
- 
-
-For STATIC accounts:
-
-The drawdown will remain the same since it is already static. For example, with a 100k STATIC account, the drawdown will remain at $99,375 and will not change.
-
-### Trailing Drawdown and Rules
-
+Apex Trader Funding Help Center home page
+FAQ
+Login to Apex Trader Funding
+Sign in
+Select Language​▼
+Help Center
+Search
+Search...
+Apex Trader Funding
+ Knowledge Base
+ Evaluation Content
+Evaluation Rules
+Patrick
+Patrick
+Updated 3 months ago
+Not yet followed by anyone
+Trailing Drawdown and Rules
 Understanding the Trailing Threshold and Evaluation Rules (Master Course)
 Introduction
 
@@ -93,7 +25,7 @@ The video below summarises the Trailing Drawdown Threshold:
 Play
 
 
-00:58
+08:42
 14:13
 Mute
 
@@ -118,8 +50,7 @@ Second Trade: During the next trade, your balance peaks at $50,800, but you only
 
 This example highlights that the trailing threshold is based on the highest live value during trades, not on closed trade values. It’s crucial to remember this to avoid unintentionally exceeding the maximum drawdown.
 
-### Drawdown Types: FULL vs. STATIC Accounts
-
+Drawdown Types: FULL vs. STATIC Accounts
 FULL Accounts:
 In paid/funded accounts, the max drawdown stops trailing once the liquidation threshold is the initial balance plus $100 (e.g., $50,100 on a 50k plan).
 The trailing threshold stops moving once your unrealized balance exceeds the plan’s start balance by the drawdown amount plus $100.
@@ -131,8 +62,9 @@ The drawdown level remains unchanged. For instance, a 100k static account has a 
 The example below illustrates a fixed drawdown level at roughly 10.5 points using 3 contracts on NQ, which would be around the $625 static drawdown for the $100,000 account.
 FINAL STATIC.gif
 
-### Trailing Max Drawdown by Plan and Contract Size
+ 
 
+Trailing Max Drawdown by Plan and Contract Size
 Plan Account Size Max Loss/Trailing Threshold
 
 25K Full Size 4 Minis - 1500
@@ -151,27 +83,20 @@ Plan Account Size Max Loss/Trailing Threshold
 
 100K Static 2 Minis - 625
 
-### Special Rules for RITHMIC and TRADOVATE Accounts For Trailing Drawdown
-
+Special Rules for RITHMIC and TRADOVATE Accounts For Trailing Drawdown
 RITHMIC Accounts: During the evaluation, the drawdown stops trailing when the threshold balance reaches your profit target (not the account balance). For instance, a 50K account stops trailing when the threshold reaches $53,000.
 TRADOVATE Accounts: The trailing drawdown continues to trail in evaluations and does not stop.
-
-### Monitoring Your Account and Avoiding Liquidation
-
+Monitoring Your Account and Avoiding Liquidation
 Max Drawdown Monitoring: Always check your trailing max drawdown in your RTrader or Tradovate dashboard. The auto-liquidation threshold reflects this value.
 Drawdown Failure: Dropping below the drawdown threshold fails the evaluation.
 Rithmic and Tradovate Access: For RITHMIC accounts, download RTrader Pro from the member area. Both RTrader and Tradovate platforms allow you to monitor and control your account.
-
-### Evaluation Account Rules
-
+Evaluation Account Rules
 Account Balance: Your balance must close at or above the profit goal without hitting the max drawdown. Ensure a clear understanding of the Trailing Threshold Drawdown to prevent accidental liquidation.
 Minimum Trading Days: Complete a minimum of seven trading days (non-consecutive) for a valid evaluation (subject to any active promotions for 1-day-pass).
 Professional Conduct: Follow the code of conduct and maintain professionalism. Sharing your username or password is prohibited.
 Account Monitoring: Keep RTrader/Tradovate open to monitor your balance and max drawdown, and as a backup for closing trades if needed. Stay aware of the trailing threshold.
 Trailing Threshold Awareness: Track the trailing threshold carefully, as it moves with the highest profit point achieved in active trades and can impact your evaluation outcome if not managed
-
-### Evaluation Account General Guidelines
-
+Evaluation Account General Guidelines
 Trade Close-Out Timing:
 All trades must be closed, and all pending orders canceled by 4:59 PM ET. Holding trades through the close is not permitted.
 APEX has a safeguard to automatically close open positions and cancel pending orders attached to a position at 4:59 PM ET. This safeguard is a final resort and should not be relied upon. Therefore, you must manually cancel orders not attached to a position. If they remain open, they may liquidate your account.
@@ -194,8 +119,21 @@ Trading Consistency: Randomly changing trade sizes or going “all in” undermi
 Consistency Rules: These apply mainly to PA and Funded accounts, where steady, structured trading is required.
 Important: The trailing threshold provides a safety margin, but understanding its dynamics and monitoring it in real time is crucial to avoid unintended account liquidation.
 
-### Common Helpdesk Questions
+For a detailed walkthrough, watch our video explaining the Trailing Threshold below. 
 
+Play
+
+
+00:00
+14:13
+Mute
+
+Settings
+Enter fullscreen
+
+Play
+
+Common Helpdesk Questions
 These comprehensive answers are related to frequently asked questions, which will help you navigate our platform effectively. Please read carefully to fully understand our policies and procedures.
 
 Platform Conversion
@@ -250,8 +188,7 @@ E-Micro USD/JPY M6J CME
 
 Micro Crude Oil MCL NYMEX
 
-### Starting Your Evaluation
-
+Starting Your Evaluation
 How many profitable weeks should I have before I’m ready for an evaluation?
 You can start now! There is no requirement to have a certain number of profitable weeks before beginning an evaluation. In fact, our program offers an economical way to learn to trade and risk management without risking your own capital.
 
@@ -334,9 +271,7 @@ If you receive an error message indicating a rule violation (e.g., surpassing th
 
 Evaluation Accounts: You will need to reset your account or start a new evaluation. Resets allow you to start over with the full balance and trailing threshold.
 Performance Accounts (PAs): Resets are not available. Violations in a PA account may lead to account closure.
-
-### Trading Multiple Accounts
-
+Trading Multiple Accounts
 Why would I want to trade multiple evaluation accounts?
 
 Trading multiple accounts can diversify your strategies and increase potential profits. For a detailed explanation, please refer to our video here:
@@ -344,7 +279,7 @@ Trading multiple accounts can diversify your strategies and increase potential p
 Play
 
 
-03:11
+00:00
 15:39
 Mute
 
@@ -367,3 +302,50 @@ At the top, you’ll see a cumulative Profit and Loss (PnL) chart, which shows h
 Directly underneath, each row of the table displays key account metrics updated nightly at midnight ET. These include your most recent trade date, account type, total PnL, and the number of trading days completed. You can also see critical thresholds such as the trailing stop (maximum allowed drawdown), current account balance, target profit levels, and an easy-to-read progress bar that visually indicates how close you are to reaching the goals or potential breaches. 
 
 Finally, the status and state columns inform you if the account is active, inactive, passed, or blown, ensuring you always know exactly where you stand in your evaluation or PA journey.
+
+
+
+Need Assistance?
+If you have any additional questions or need further clarification, please don’t hesitate to submit a help desk ticket. We’re here to help you succeed.
+
+To submit a help desk ticket, CLICK HERE 
+
+  
+Previous article
+Tradovate Flatten Accounts
+Next article
+Evaluation Subscription & Billing
+Was this article helpful?
+24 out of 25 found this helpful
+Have more questions? Submit a request
+
+Related articles
+Performance Account (PA) and Live Account Rules
+PA Payout Rules and Payout Method
+Evaluation Passed, Converting to a PA, PA Fees, and How to Activate
+Evaluation Subscription & Billing
+Apex 3.0 Payout and Trading Rules
+Recently viewed articles
+Tradovate Account Dashboard and Threshold/Drawdown
+Comments
+0 comments
+
+Article is closed for comments.
+
+In this article
+Trailing Drawdown and Rules
+Drawdown Types: FULL vs. STATIC Accounts
+Evaluation Account Rules
+Common Helpdesk Questions
+Maximum Position Size on Regular Contracts and Micros
+Starting Your Evaluation
+Trading Multiple Accounts
+Eval Charts Tutorial and Troubleshooting
+Articles in this section
+Evaluation Rules
+Evaluation Subscription & Billing
+Evaluation Passed, Converting to a PA, PA Fees, and How to Activate
+Can't find what you're looking for?
+Our team of experts is here to help
+
+Back to website
